@@ -1,0 +1,64 @@
+:root {
+    --left-color: white;
+    --right-color: white;
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+}
+
+.content div {
+    /* border: 2px red solid; */
+}
+
+#colorToggle {
+    height: 20px;
+}
+
+.content {
+    display: flex;
+    height: 100%;
+}
+
+.left {
+    display: flex;
+    flex: 0.5;
+    background: var(--left-color);
+    border-right: 10px solid black;
+    transition: 3s;
+    opacity: 0.65;
+    /* animation: smoothColor 5s ease forwards; */
+}
+.right {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    transition: 3s;
+    background: var(--right-color);
+}
+
+.right div {
+    opacity: 1;
+    flex: 1;
+    background: var(--left-color);
+    transition: 3s;
+    border: 10px solid gray;
+    border-radius: 35px;
+    margin: 15px 5vw;
+    opacity: 0;
+    transform: translateY(-100%);
+    animation: fallDown 1s ease forwards;
+    animation-delay: calc(var(--order) * 400ms);
+}
+
+@keyframes fallDown {
+    50%{
+        opacity: 1;
+        transform: translateY(10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
