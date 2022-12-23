@@ -38,7 +38,7 @@ body {
     background: var(--right-color);
 }
 
-.right div {
+.right>div {
     opacity: 1;
     flex: 1;
     background: var(--left-color);
@@ -61,4 +61,40 @@ body {
         opacity: 1;
         transform: translateY(0);
     }
+}
+
+.right .mid {
+    display: flex;
+    align-items: center;
+}
+
+form {
+    font-size: 30px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+
+}
+
+form div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* border: 2px red solid; */
+    margin: 10px;
+    width: 30%;
+    height: 50px;
+}
+
+form input {
+    height: 30px;
+    border-radius: 10px;
+    margin: 5px;
+}
+
+button {
+    width: 200px;
+    height: 100px;
+    margin: 50px;
 }
